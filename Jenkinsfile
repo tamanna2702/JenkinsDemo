@@ -1,16 +1,14 @@
 pipeline {
 
     agent any
-    tools {
-        maven 'maven_3_5_4'
-      }
+
     stages {
 
         stage ('Compile Stage') {
 
             steps {
 
-                    sh 'maven clean compile'
+                    sh 'mvn clean compile'
             }
         }
         stage ('Testing Stage') {
